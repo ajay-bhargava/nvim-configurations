@@ -4,3 +4,6 @@
 
 vim.opt.relativenumber = false
 vim.opt.number = true
+
+-- Python virtual environment
+vim.env.VIRTUAL_ENV = vim.fn.getcwd() .. "/.venv"
