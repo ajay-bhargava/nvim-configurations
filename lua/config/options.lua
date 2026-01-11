@@ -5,5 +5,8 @@
 vim.opt.relativenumber = false
 vim.opt.number = true
 
+-- Enable true color support
+vim.opt.termguicolors = true
+
 -- Python virtual environment
 vim.env.VIRTUAL_ENV = vim.fn.getcwd() .. "/.venv"
