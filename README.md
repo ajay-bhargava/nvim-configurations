@@ -63,7 +63,7 @@ Plugins live in `lua/plugins/` and are managed by lazy.nvim. Each file returns a
 ### Key Features
 
 - **Plugin Management** — Automatic updates with periodic checks. Set it and forget it.
-- **Color Scheme** — TokyoNight by default (with Habamax fallback for minimalists)
+- **Color Scheme** — GitHub theme with automatic light/dark mode switching based on system appearance
 - **Git Integration** — Signs in the gutter + diff viewing to track changes like a pro
 - **Completion** — Blink completion engine for fast, intelligent code completion
 - **Fuzzy Finding** — Telescope for searching files and text at lightning speed
