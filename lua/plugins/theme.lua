@@ -27,11 +27,10 @@ return {
       
       set_theme_from_system()
       
-      -- Poll system appearance every 1 second
-      local timer = vim.uv.new_timer()
-      if timer then
-        timer:start(1000, 1000, vim.schedule_wrap(set_theme_from_system))
-      end
+      -- Re-check when focus returns instead of polling continuously.
+      vim.api.nvim_create_autocmd("FocusGained", {
+        callback = set_theme_from_system,
+      })
     end,
-  }
+  },
 }
