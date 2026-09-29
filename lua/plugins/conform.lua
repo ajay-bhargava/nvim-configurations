@@ -3,6 +3,7 @@ return {
   opts = function()
     local biome_cmd = vim.fn.executable("biome") == 1 and "biome"
       or (vim.fn.executable("biomejs") == 1 and "biomejs" or nil)
+    local has_jq = vim.fn.executable("jq") == 1
     local has_ruff = vim.fn.executable("ruff") == 1
     local formatters_by_ft = {}
 
@@ -16,6 +17,8 @@ return {
       formatters_by_ft.typescript = { "biome" }
       formatters_by_ft.typescriptreact = { "biome" }
       formatters_by_ft.json = { "biome" }
+    elseif has_jq then
+      formatters_by_ft.json = { "jq" }
     end
 
     return {

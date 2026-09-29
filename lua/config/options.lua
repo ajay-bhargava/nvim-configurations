@@ -8,3 +8,11 @@ vim.opt.number = true
 -- Enable true color support
 vim.opt.termguicolors = true
 
+-- Disable wrap by default
+vim.opt.wrap = false
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
+
